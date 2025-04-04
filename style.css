@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  /* 3. Enable keyword animations */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+  
+  body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 6. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 7. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 8. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 9. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+
+  body {
+    font-family:  Bai Jamjuree;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 18px;
+    text-align: center;
+    
+  }
+
+  main, footer{
+    display: flex;
+    flex-direction: column;
+    padding:  1rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  p::before {
+    content: "";
+    background-image: url(images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: green; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 10%;
+
+  }
+
+  p::after {
+    content: "";
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 10%;
+
+  }
+  .btn {
+    display: flex;
+    flex-direction: column ;
+    margin: 1rem auto;
+    width: 100%;
+    
+  }
+  /* COME BACK HEREEEEEE
+  ALSO DO CLAMP FOR FONTS */
+  button {
+    margin: 0.5rem 0;
+    border-radius: 2rem;
+    padding: 1rem;
+    align-self: stretch;
+    background-color: hsl(233, 100%, 69%);
+    color: white;
+    border: none;
+    box-shadow:0 5px hsl(233, 54%, 52%)
+  }
+  button:first-child {
+    background-color: hsl(171, 66%, 44%);
+    box-shadow: 0 5px hsl(171, 66%, 30%);;
+  }
+  
+  
+  h1, h2, h3 {
+    font-size: 1.5rem;
+    padding:  1.5rem;
+    color:hsl(210, 10%, 33%);
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 1rem;
+    padding: 0.2rem;
+    color: hsl(201, 11%, 66%)
+  }
+  
+  .small-container, section.companies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .companies {
+    margin-top: 2rem;
+  }
+
+  .companies img {
+    margin:1rem
+  }
+  .small-logo {
+    max-width: 20%;
+    margin-bottom: 1rem;
+  }
+  ul {
+    padding: 0;
+  }
+  li {
+    margin: 1rem 0;
+    list-style-type: none;
+    
+  }
+  .socials img {
+    padding: 0.5rem 0;
+    margin: 0 1rem;
+  }
+  .socials {
+    display: flex;
+  }
+  footer::before {
+    content: "";
+    
+    background-color: hsl(0, 0%, 94%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+  }
+  .small-logo {
+    width: 10%;
+    margin: 0 
+  }
+
+
+
+  @media screen and (min-width:800px) {
+    p::before {
+      
+        content: "";
+        background-image: url(images/bg-header-desktop.png)
+
+    }
+    .btn {
+      flex-direction: row;
+      justify-content: center;
+      
+    }
+    button {
+      margin: 2rem 1rem
+    }
+    p {
+      max-width: 50rem;
+      max-height: 2rem;
+    }
+
+    .computer-container {
+      display: flex;
+      margin: 4rem 0;
+    }
+    .computer-container img {
+      min-width: 60%;
+      height: 60%;
+      position: relative;
+      right: 10%;
+    }
+    .small-container {
+      min-width: 9rem;
+      text-align: start;
+      margin-left: 1rem;
+      max-width:20rem
+    }
+    .small-container h3 {
+      text-align: start;
+    }
+    .supercharge-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      
+    }
+    .computer-container p {
+      max-height: 5rem;
+    }
+    
+    section.companies {
+      display: flex;
+      flex-direction: row;
+      margin: 5rem 0;
+      flex-wrap: wrap;
+    }
+    section.companies img {
+      width: 18%;
+    }
+    
+    footer {
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 3rem;
+    }
+    ul.grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr ;
+      column-gap: 4rem;
+      row-gap: 1em;
+      text-align: start;
+      justify-content: center;
+      align-items: center;
+    }
+    
+  }
+
+
